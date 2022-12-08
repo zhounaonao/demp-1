@@ -2,8 +2,10 @@
   <div class="app-container">
     <h1>App 根组件 --- rightCount: {{ rightCount }}</h1>
     <button @click="reLeftMsg">更改left组件的leftMsg</button>
-    <Test :init="10" v-if="isTest"></Test>
     <button @click="isTest = !isTest">Test组件的展开和关闭</button>
+    <Test :init="10" v-if="isTest"></Test>
+    <hr>
+    <ArrFunction></ArrFunction>
     <hr />
     <!-- @blur失去焦点触发事件 -->
     <input ref="iptRef" v-if="showIB" @blur="showButton" type="text" />
@@ -21,11 +23,13 @@
 import Left from "@/components/Left.vue";
 import Right from "@/components/Right.vue";
 import Test from "@/components/Test.vue";
+import ArrFunction from "@/components/ArrFunction.vue";
 export default {
   components: {
     Left,
     Right,
     Test,
+    ArrFunction
   },
   data() {
     return {
