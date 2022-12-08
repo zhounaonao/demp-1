@@ -2,6 +2,7 @@
   <div data-v-001 class="left-container">
     <h3 data-v-001>Left 组件</h3>
     <button @click="sendMsg">发送消息给Right</button>
+    <span>将要发送的消息：{{ leftMsg }}</span>
     <hr>
     <h4 data-v-001>data-v-001</h4>
     <!-- :后成为数值9，不然是字符串9 -->
